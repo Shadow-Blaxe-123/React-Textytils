@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 export default function TextForm(props) {
+  //Component logic for text manipulation 
   const [text, setText] = useState("");
   const handleOnChange = (event) => {
     setText(event.target.value);
@@ -25,21 +26,11 @@ export default function TextForm(props) {
   const handleCopy = () => {
     navigator.clipboard.writeText(text);
   };
-  const color = (props) => {
-    if (props.mode === "bg-dark text-white") {
-      let style = {
-        backgroundColor: `#637064` ,
-        color: "white",
-      };
-      return style;
-    }
-  };
   return (
     <div>
       <textarea
         placeholder="Enter Text Here"
         name="textarea"
-        id=""
         cols="100"
         rows="10"
         onChange={handleOnChange}

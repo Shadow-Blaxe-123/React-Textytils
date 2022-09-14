@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// All components
 import './App.css';
 import Navigation from './Components/Navigation';
 import TextForm from './Components/TextForm';
@@ -6,19 +6,19 @@ import Alerts from './Components/Alerts';
 import React, { useState } from "react";
 
 function App() {
+  // Setting Dark and Light Modes
   const [mode, setMode] = useState('light')
   function toggleMode (){
     if (mode === 'light'){
       setMode('bg-dark text-white');
-      console.log('dark');
       document.body.style.backgroundColor = '#042743';
     }
     else{
       setMode('light')
-      console.log('light')
       document.body.style.backgroundColor = 'white';
     }
   }
+  // Setting Alerts
   const [alert, setAlert] = useState(null);
 
 
